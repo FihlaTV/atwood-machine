@@ -14,11 +14,11 @@ var render = Render.create({
 });
 
 var options = {
-    friction: 0,
+    friction: 100,
     restitution: 1.3
 }
 // create two boxes and a ground
-var boxA = Bodies.rectangle(400, 200, 300, 300, options);
+var boxA = Bodies.rectangle(400, 200, 80, 100, options);
 var boxB = Bodies.rectangle(450, 50, 80, 80, options);
 var boxC = Bodies.rectangle(450, 50, 80, 80, options);
 var ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });

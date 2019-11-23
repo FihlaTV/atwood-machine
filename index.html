@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
 
-    <title>Perot App</title>
+<head>
+  <meta charset="utf-8">
 
-    <script src="js/matter.js"></script>
-  </head>
-  <body>
-    <script src="js/script.js"></script>
-  </body>
-</html>
+  <title>Perot App</title>
+
+  <script src="js/matter.js"></script>
+</head>
+
+<body>
+  <center>
+    <H3> Atwood's machine</H3>
+  </center>
+  <canvas id="myCanvas" width="540" height="400"></canvas>
+  <center>
+    <div id="buttons">
+      <input type="button" id="play" value="Play" onclick="play()">
+      <input type="button" id="pause" value="Pause" onclick="pause()">
+      <input type="button" id="stepback" value="<< Step" onclick="stepBack()">
+      <input type="button" id="stepforward" value="Step >>" onclick="stepForward()">
+      <input type="button" id="reset" value="Reset" onclick="reset()">
+    </div>
+
+    <BR>
+    <div>Mass of block 1 (on the left)</div>
+    <div id="slider1">
+      0.1 kg <input type="range" id="mass1Value" min="0.1" max="2.0" value="1.2" step="0.1"
+        oninput="showMass1(this.value)" onchange="showMass1(this.value)"> 2.0 kg
+      <div id="initialMass1Value">1.2</div>
+    </div>
+    <div>Mass of block 2 (on the right)</div>
+    <div id="slider2">
+      0.0 kg <input type="range" id="mass2Value" min="0.0" max="2.0" value="1.0" step="0.1"
+        oninput="showMass2(this.value)" onchange="showMass2(this.value)"> 2.0 kg
+      <div id="initialMass2Value">1.0</div>
+    </div>
+
+    <div id="FBDbuttons">
+      <input type="button" id="FBD1" value="Hide the free-body diagrams" onclick="setMode(1)">
+      <input type="button" id="FBD2" value="Show the free-body diagrams" onclick="setMode(2)">
+    </div>
+
+  </center>
+
+<script src="js/script.js"></script>
+<script src="js/bu.js"></script>
+</body>
+
+</html>1
